@@ -18,11 +18,11 @@ class Instructor extends Person {
     this.catchPhrase = attr.catchPhrase
     }
     demo(subject) {
-        return `Today we are learning about ${subject}`;
+        console.log(`Today we are learning about ${subject}`);
     }
     grade(student, subject)  {
 
-    return `${student.name} receives a perfect score on ${subject}`
+    return `${student} receives a perfect score on ${subject}`
     }
 }
 
@@ -34,7 +34,7 @@ class Student extends Instructor {
     this.listsSubjects = attr.listsSubjects
     }
     PRAssignment(subject) {
-        return `${this}.name} has submitted a PR for ${subject}`
+        return `${this.name} has submitted a PR for ${subject}`
     }
     sprintChallenge(subject) {
         return `${this.name} has begun sprint challenge on ${subject}`
@@ -44,14 +44,14 @@ class Student extends Instructor {
 class PM extends Instructor {
     constructor(attr) {
     super(attr)
-    this.gradeClassName = attr.gradeClassName
+    this.gradClassName = attr.gradClassName
     this.favInstructor = attr.favInstructor
     }
     standup(channel) {
         return `${this.name} announces to ${channel}, @channel standy times!`
     }
     debugscode(student, subject) {
-        `${this.name} debugs ${student.name}'s code on ${subject}`
+       return `${this.name} debugs ${student}'s code on ${subject}`
     }
 }
 
@@ -89,7 +89,7 @@ const adam = new Student ({
     age: 36,
     previousBackground: 'Oilfield',
     className: 'Web21',
-    favSubjects: ['CSS', 'HTML', 'JavaScript']
+    listsSubjects: ['CSS', 'HTML', 'JavaScript']
 })
 
 const kaitlyn = new Student ({
@@ -98,7 +98,7 @@ const kaitlyn = new Student ({
     age: 19,
     previousBackground: Student,
     className: 'PTWeb19',
-    favSubjects: ['data-science', 'biology', 'anatomy']
+    listsSubjects: ['data-science', 'biology', 'anatomy']
 
 })
 
@@ -108,7 +108,7 @@ const sarah = new Student ({
     age: 39,
     previousBackground: 'HR Rep',
     className: 'Sci22',
-    favSubjects: ['CSS', 'React', 'Python']
+    listsSubjects: ['CSS', 'React', 'Python']
 })
 
 const henry = new PM({
@@ -127,4 +127,15 @@ const jill = new PM({
     favInstructor: "Dan"
 })
 
+console.log(john.specialty);
+console.log(john.demo('CSS'));
+console.log(adam.PRAssignment('JavaScriptIV'));
+console.log(kaitlyn.speak());
+console.log(sarah.sprintChallenge('CSS'));
+console.log(adam.grade('Adam', 'JavaScript'));
+console.log(henry.standup('Web21_Henry'));
+console.log(jill.debugscode('Kaitlyn', 'HTML'));
+console.log(henry);
+console.log(henry.age);
+console.log(john.catchPhrase);
 
