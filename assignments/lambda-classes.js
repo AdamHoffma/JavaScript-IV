@@ -55,12 +55,12 @@ class PM extends Instructor {
     }
 }
 
-const john = new Instructor({
-    name: 'John',
-    location: 'Utah',
-    age: 56,
-    favLanguage: 'CSS',
-    specialty: 'Front-end',
+const rick = new Instructor({
+    name: 'Sanchez, Rick',
+    location: 'Dimension 427-b',
+    age: 69,
+    favLanguage: 'Gorp-a-Lorp',
+    specialty: 'Inner-dimensional-travel',
     catchPhrase: `wub-A-dub-Lub-lub`
 });
 
@@ -127,15 +127,24 @@ const jill = new PM({
     favInstructor: "Dan"
 })
 
-console.log(john.specialty);
-console.log(john.demo('CSS'));
-console.log(adam.PRAssignment('JavaScriptIV'));
-console.log(kaitlyn.speak());
-console.log(sarah.sprintChallenge('CSS'));
-console.log(adam.grade('Adam', 'JavaScript'));
-console.log(henry.standup('Web21_Henry'));
-console.log(jill.debugscode('Kaitlyn', 'HTML'));
-console.log(henry);
-console.log(henry.age);
-console.log(john.catchPhrase);
+//console.log(rick.specialty);
+//console.log(rick.demo('CSS'));
+//console.log(adam.PRAssignment('JavaScriptIV'));
+//console.log(kaitlyn.speak());
+//console.log(sarah.sprintChallenge('CSS'));
+//console.log(adam.grade('Adam', 'JavaScript'));
+//console.log(henry.standup('Web21_Henry'));
+//console.log(jill.debugscode('Kaitlyn', 'HTML'));
+//console.log(henry);
+//console.log(henry.age);
+//console.log(rick.catchPhrase);
+//console.log(sarah.name);
+//console.log(rick);
 
+console.log(rick.name,'||', rick.location,'||', rick.age,'||', rick.specialty,'||', rick.favLanguage,'||', rick.catchPhrase);
+/*console.log(rick.location);
+console.log(rick.age)
+console.log(rick.specialty);
+console.log(rick.favLanguage);
+console.log(rick.catchPhrase);
+*/
